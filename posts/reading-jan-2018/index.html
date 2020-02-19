@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Reading - Jan 2018&nbsp;&ndash;&nbsp;Đinh Quang Hiếu&#39;s blog</title><link rel="stylesheet" href="/css/core.min.8f859e214178536304ee5d1706deb8f51c0961249e3fa0187afe2b67637c6cfc2734041fbe4ed44f16bc948984376eb6.css" integrity="sha384-j4WeIUF4U2ME7l0XBt649RwJYSSeP6AYev4rZ2N8bPwnNAQfvk7UTxa8lImEN262"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon" alt /><span class="site name">Đinh Quang Hiếu's blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="https://github.com/dqhieu"target="_blank">Github</a></nav></div></span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Reading - Jan 2018</h1><p class="article date">Wednesday, January 31, 2018</p></section><article class="article markdown-body"><ol>
+<li>
+<p><a href="https://medium.com/flawless-app-stories/basics-of-parallel-programming-with-swift-93fee8425287"target="_blank">Basics of parallel programming with Swift</a>. Nói về lập trình song song trong iOS/Swift. Phân biệt concurrency và parallelism nhưng cho ví dụ không hiểu cho lắm. Nói về các cơ chế concurrency như <code>Process</code>, <code>Thread</code>, <code>Dispatch Queues</code>, <code>Operation Queues</code>, <code>Run Loops</code>, <code>Lightweights Routines</code> và các cách để control mấy cơ chế đó như <code>Priority Inversion</code>, <code>Priority Inheritance</code>, <code>Atomic</code>, <code>Lock</code>, <code>Spinlock</code>, <code>Mutex</code>, <code>Semaphore</code>, <code>Synchronized</code>, <code>Concurrency Queues Dispatching</code>, <code>Dispatch Barriers</code>, <code>Trampoline</code>. Viết nhiều quá mình đọc không hết :)) Phần lớn chỉ giới thiệu qua là chủ yếu (this posts just scratches the surface). Sau khi đọc xong mình cũng chỉ gọi là có biết thêm thôi chứ không đọng lại được gì nhiều.</p>
+</li>
+<li>
+<p><a href="https://www.swiftbysundell.com/posts/capturing-objects-in-swift-closures"target="_blank">Capturing objects in Swift closures</a>. Nói về việc capture object khi sử dụng closure. Closure là gì? Mình cũng không chắc lắm về khái niệm này. Theo như Apple nói thì closure giống như blocks trong C/C++ và lambda trong các ngôn ngữ lập trình khác. Sau khi đọc xong thì hiểu được vì sao trước đây mình khai báo closure Xcode hay bắt mình thêm cái keywork <code>@escaping</code> vào, và <code>@escaping</code> khác với <code>@non-escaping</code> như thế nào (chả hiểu sao bữa trước phỏng vấn pass được câu &ldquo;Em biết Closure không? Um, nó là gì vậy?&quot;). Bài viết tập trung về vấn đề object bị capture khi sử dụng closure gây ra tình trạng retain cycle và đưa ra 2 giải pháp. Đầu tiên là capture context thay vì <code>self</code> (không phải là giải pháp sử dụng <code>[weak self]</code> đâu nha, trò này xưa rồi, ai cũng biết 😂). Thứ hai là thay vì capture object thì pass as argument. Đại khái là thay vì ở trong closure mình gọi <code>self.object</code> thì chỉ cần truyền cái object muốn sử dụng vào closure (bản chất vẫn là weak object) nhưng được thiết kế khá là hay theo kiểu KVO.</p>
+</li>
+<li>
+<p><a href="https://www.swiftbysundell.com/posts/first-class-functions-in-swift"target="_blank">First class functions in Swift</a>. Nói về first class function trong Swift. Thật thì mình biết từ khóa này lâu rồi nhưng không biết nó nghĩa là gì, gần đây mới bắt đầu đi tìm hiểu và thông qua nó biết được thêm first-class citizen 😱</p>
+</li>
+<li>
+<p><a href="https://niviki.com/quan-ly-bo-nho-trong-swift/"target="_blank">Quản lý bộ nhớ trong Swift</a>. Một bài viết khá là chi tiết và đầy đủ về quản lý bộ nhớ trong iOS. Đây chắc là lần thứ n mình đọc lại bài này vì quên mất Stack vs Heap khác nhau như thế nào, và chủ yếu đọc lại chỉ để phân biệt được Stack và Heap 😭</p>
+</li>
+<li>
+<p><a href="https://www.swiftbysundell.com/posts/avoiding-singletons-in-swift"target="_blank">Avoid Singletons in Swift</a>. Nói về các vấn đề của Singleton và cách khắc phục bằng cách áp dụng Dependency Injection. Bài viết khá hay và chi tiết, đọc xong mình rút ra được rất nhiều thứ 🤤 Từ giờ sẽ hạn chế dùng Singleton như trước đây dùng tràn lan đại hải 😂</p>
+</li>
+<li>
+<p>Best iOS hacks from Twitter: Những tip hay về iOS (và macOS) được chia sẻ trên Twitter bởi các lập trình viên nổi tiếng được gom lại theo từng tháng bởi Lisa Dziuba. Rất là nhiều tip hay và bổ ích.</p>
+<ul>
+<li><a href="https://medium.com/flawless-app-stories/best-ios-hacks-from-twitter-october-edition-ce253347f88a"target="_blank">October Edition</a></li>
+<li><a href="https://medium.com/flawless-app-stories/best-ios-hacks-from-twitter-november-edition-bd38edba8ea4"target="_blank">November Edition</a></li>
+<li><a href="https://medium.com/flawless-app-stories/best-ios-hacks-from-twitter-december-edition-8134390309e2"target="_blank">December Edition</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.swiftbysundell.com/posts/a-deep-dive-into-grand-central-dispatch-in-swift"target="_blank">A deep dive into Grand Central Dispatch in Swift</a>. <code>DispatchQueue.main.async{}</code> thì chắc ai cũng biết rồi nhưng có thể đa số chỉ biết được nhiêu đó (giống mình 😢). Bài viết này nói về những điểm mạnh của GCD mà ít người biết. Ví dụ như bài toán search: chỉ search khi người dùng ngừng gõ vào textfield trong 1 giây hoặc chẳng hạn vậy, thay vì dùng <code>Timer</code> hoặc <code>Operation</code> thì thằng GCD nó giải quyết rất đơn giản nhờ <code>DispatchWorkItem</code> 🤤 Một bài toán khác là ta cần load data ở nhiều nguồn dữ liệu khác nhau xong rồi mới update UI có thể giải quyết nhờ <code>DispatchGroup</code> hoặc <code>DispatchSemaphore</code>.</p>
+</li>
+<li>
+<p><a href="https://www.swiftbysundell.com/posts/transforming-collections-in-swift"target="_blank">Transforming collections in Swift</a>. Cách sử dụng <code>map</code>, <code>flatMap</code>, <code>reduce</code> nâng cao 🤤. Không giống như những bài viết khác về <code>map</code>, <code>flatMap</code> và <code>reduce</code>, bài viết này trình bày cách sử dụng 3 thằng trên phối hợp cùng với nhiều kỹ thuật khác, đọc xong cảm thấy như mình lạc vào thế giới khác 😂 Bởi vậy mới biết ngôn ngữ Swift đẹp đến mức nào 💪 À, được biết thêm cái mới nữa là <code>zip</code> 😱</p>
+</li>
+<li>
+<p><a href="https://medium.com/anysuggestion/turning-swift-compile-time-safety-into-safety-for-your-users-4e49a8a612f3"target="_blank">Turning Swift compile time safety into safety for your users</a>. Nếu trong app mình cần show <code>AlertController</code> khi thực hiện một thao tác nào đó, thường mình sẽ tạo 1 đối tượng <code>AlertController</code> và config cho nó ngay trong cái hàm cần gọi thao tác đó. Bài này hướng dẫn mình tiết kiệm code và thời gian bằng cách việc tạo và show cái alert đó chỉ bằng 1 dòng code với concept rất hay 😄</p>
+</li>
+</ol>
+</article><section class="article navigation">
+	<p style="text-align:left;"><a class="link" href="/posts/my-first-open-source-project/"><span class="li">&larr;</span>My first open source project</a></p>
+</section></div><section id="footer" class="footer"><div class="footer-wrap">
+	<br>
+    <p class="copyright">Đinh Quang Hiếu's blog</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>

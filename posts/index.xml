@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Đinh Quang Hiếu&#39;s blog</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Đinh Quang Hiếu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019 in Review</title>
+      <link>/posts/2019-in-review/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-in-review/</guid>
+      <description>Làm feature bị nhiều người ghét, tốn trăm triệu đi bệnh viện, giảm cân thần kỳ, travel như đi chợ&amp;hellip;. đó là năm 2019 của mình 😜
+Năm cuối cùng của thập kỷ trôi qua nhanh như một cơn gió vậy. Mới ngày nào còn ngồi viết nháp 2019 in review mà giờ qua 2020 rồi vẫn chưa viết xong 😆
+ Công việc nói chung 2019 là một năm thành công trong công việc, mặc dù mới chỉ đi làm được 2+ năm (1+ năm ở Grab) nhưng mình cảm giác như là đã đi làm được 5 năm rồi.</description>
+    </item>
+    
+    <item>
+      <title>Chuyện đi làm</title>
+      <link>/posts/chuyen-di-lam/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/chuyen-di-lam/</guid>
+      <description>Một trong những điều mà khi đi làm mới thấy thấm đó là tính linh hoạt.
+Khi làm việc một mình, bạn có quyền quyết định tất cả mọi việc và gánh chịu hậu quả từ những quyết định đó. Khi làm việc trong một nhóm, bạn không thể nào quyết định một mình được. Tất cả mọi việc đều phải có sự đồng nhất từ mọi thành viên trong nhóm, khi đó trách nhiệm sẽ được chia sẻ và mọi vấn đề sẽ được giải quyết cùng nhau.</description>
+    </item>
+    
+    <item>
+      <title>Chuyện gõ nhanh gõ chậm</title>
+      <link>/posts/chuyen-go-nhanh-go-cham/</link>
+      <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/chuyen-go-nhanh-go-cham/</guid>
+      <description>Hồi cấp 3, lúc học môn Tin mọi người thường hay bị bắt phải tập gõ bằng 10 ngón, ai gõ đủ 10 ngón thì được 10 điểm, ai chỉ dùng 9 ngón thì 9 điểm, còn ai xài tuyệt chiêu nhất dương chỉ thì 1 điểm về chỗ (mình nói đùa đấy không có thật đâu 😂). Từ đó mọi người thường hay có ý nghĩ để gõ được nhanh thì phải xài hết cả 10 ngón tay, nhưng mình thì lại không nghĩ như vậy.</description>
+    </item>
+    
+    <item>
+      <title>Thử việc tại Grab</title>
+      <link>/posts/thu-viec-tai-grab/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/thu-viec-tai-grab/</guid>
+      <description>Mình vừa kết thúc 6 tháng thử việc tại Grab Singapore (đúng rồi đấy, thử việc 6 tháng, mình không ghi nhầm đâu 😆) với vị trí Mobile Software Engineer (iOS). 6 tháng là một khoảng thời gian khá dài nhưng thực sự mình cảm thấy nó trôi qua cứ như 6 tuần hay 6 ngày vậy. Bây giờ thì mình đang ngồi rung đùi ở Sài Gòn, nhâm nhi tách cà phê và chờ kết quả.</description>
+    </item>
+    
+    <item>
+      <title>2018 in Review</title>
+      <link>/posts/2018-in-review/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2018-in-review/</guid>
+      <description>Đọc hơn 28 bài viết về software/tech nói chung. Publish post về UIGradirent.   Là một open source project cá nhân mà mình làm trong thời gian rảnh rỗi. Về project này cũng không phải là gì quá cao siêu, bạn có thể tham khảo tại đây.
+ Mua được vài cuốn sách về Swift Programming. Convert thành công Movad iOS App từ kiến trúc MVC sang VIPER. Fossil Labs runner up.</description>
+    </item>
+    
+    <item>
+      <title>Reading - May 2018</title>
+      <link>/posts/reading-may-2018/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/reading-may-2018/</guid>
+      <description>Why I Don&amp;rsquo;t Use Auto-layout. Mình đã từng rất thích sử dụng autolayout thông qua lib SnapKit vì thấy nó rất tiện cho đến khi mình vô tình tìm thấy một lib khác. Và sau nhiều lần suy nghĩ mình đã quyết định bỏ SnapKit, bỏ luôn autolayout. Trong bài viết trên cũng đã nêu rõ những vấn đề của autolayout và phần lớn đều đúng với mình, tức là mình cũng cảm thấy khó chịu về những vấn đề đó.</description>
+    </item>
+    
+    <item>
+      <title>Reading - April 2018</title>
+      <link>/posts/reading-april-2018/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/reading-april-2018/</guid>
+      <description>UIKit Dynamics in the real world. Sử dụng UIDynamicAnimator để tạo hiệu ứng swipe giống như app Tinder mà không cần tốn nhiều công sức :D
+  UI Toggles to turn you on. Những UI concept về toogle rất đẹp, yêu ngay từ cái nhìn đầu tiên 😍
+  Why are the Firebase API asynchronous?. Thật sự hơi thất vọng khi đọc bài viết này vì tưởng sẽ biết được nhiều thứ sâu xa đằng sau 😄 Chốt lại là có 2 lí do vì sao nó không synchronous: block main thread (1), để giải quyết (1) thì phải code nhiều hơn (2).</description>
+    </item>
+    
+    <item>
+      <title>Reading - Feb 2018</title>
+      <link>/posts/reading-feb-2018/</link>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/reading-feb-2018/</guid>
+      <description>Swift Non-Nil Values In An Array Of Optionals. Để duyệt một mảng gồm các phần tử kiểu Optional, người ta thường nghĩ đến flatMap. Nhưng với bài viết này, tác giả giới thiệu một cách tiếp cận khác đó là sử dụng từ khóa case (do Optional là một enum gồm 2 case .none và .some(T)) và kết hợp với từ khóa where (tương đương với filter).
+  Lập trình web: 10 antipattern nên tránh.</description>
+    </item>
+    
+    <item>
+      <title>My first open source project</title>
+      <link>/posts/my-first-open-source-project/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/my-first-open-source-project/</guid>
+      <description>Vào một ngày đẹp trời, mình lướt Medium và thấy một cái UI concept được thiết kế rất đẹp với các màu gradient, thế là chợt nghĩ ra ý tưởng làm một cái lib để sử dụng gradient color trong iOS. Nghĩ là làm, mình search google và tìm được vài kết quả. Ngó sơ qua thấy cũng đơn giản nên bay vào làm luôn.
+GradientLayer Trong iOS, để set gradient background color cho một đối tượng UIView, mình phải tạo một đối tượng CAGradientLayer và insert nó vào cái view cần set gradient background color.</description>
+    </item>
+    
+    <item>
+      <title>Reading - Jan 2018</title>
+      <link>/posts/reading-jan-2018/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/reading-jan-2018/</guid>
+      <description>Basics of parallel programming with Swift. Nói về lập trình song song trong iOS/Swift. Phân biệt concurrency và parallelism nhưng cho ví dụ không hiểu cho lắm. Nói về các cơ chế concurrency như Process, Thread, Dispatch Queues, Operation Queues, Run Loops, Lightweights Routines và các cách để control mấy cơ chế đó như Priority Inversion, Priority Inheritance, Atomic, Lock, Spinlock, Mutex, Semaphore, Synchronized, Concurrency Queues Dispatching, Dispatch Barriers, Trampoline.</description>
+    </item>
+    
+  </channel>
+</rss>

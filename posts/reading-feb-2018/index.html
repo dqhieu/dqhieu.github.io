@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Reading - Feb 2018&nbsp;&ndash;&nbsp;Đinh Quang Hiếu&#39;s blog</title><link rel="stylesheet" href="/css/core.min.8f859e214178536304ee5d1706deb8f51c0961249e3fa0187afe2b67637c6cfc2734041fbe4ed44f16bc948984376eb6.css" integrity="sha384-j4WeIUF4U2ME7l0XBt649RwJYSSeP6AYev4rZ2N8bPwnNAQfvk7UTxa8lImEN262"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon" alt /><span class="site name">Đinh Quang Hiếu's blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="https://github.com/dqhieu"target="_blank">Github</a></nav></div></span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Reading - Feb 2018</h1><p class="article date">Wednesday, February 28, 2018</p></section><article class="article markdown-body"><ol>
+<li>
+<p><a href="https://useyourloaf.com/blog/swift-non-nil-values-in-an-array-of-optionals/"target="_blank">Swift Non-Nil Values In An Array Of Optionals</a>. Để duyệt một mảng gồm các phần tử kiểu Optional, người ta thường nghĩ đến flatMap. Nhưng với bài viết này, tác giả giới thiệu một cách tiếp cận khác đó là sử dụng từ khóa case (do Optional là một enum gồm 2 case .none và .some(T)) và kết hợp với từ khóa where (tương đương với filter).</p>
+</li>
+<li>
+<p><a href="https://techtalk.vn/lap-trinh-web-10-antipattern-nen-tranh.html"target="_blank">Lập trình web: 10 antipattern nên tránh</a>. Tiêu đề là 10 antipattern nên tránh trong lập tình web nhưng thật ra có thể áp dụng được với tất cả nền tảng còn lại, nói chung đã là antipattern rồi thì web hay mobile hay ngôn ngữ nào chả như nhau :)) Đọc xong nhận ra trước giờ không có project nào tổ chức code hoàn hảo quá, nếu có thì project đó cũng không xài được 😂</p>
+</li>
+<li>
+<p><a href="http://agostini.tech/2017/11/26/design-patterns-in-swift-abstract-factory/"target="_blank">Design Patterns in Swift: Abstract Factory</a>. Một bài viết nói về Abstract Factory pattern trong Swift, sử dụng ví dụ cũ kết hợp với Dependency Inversion Principle. Những bài như vậy mình đã được học từ rất lâu rồi nhưng khi áp dụng vào thực tế lại là một chuyện rất khác, có thể là do mình chưa biết cách áp dụng hoặc áp dụng sai.</p>
+</li>
+<li>
+<p><a href="https://medium.com/@NilStack/swift-world-design-patterns-adapter-3e09fc6fd100"target="_blank">Swift World: Design Patterns — Adapter</a>. Một bài viết khá sơ sài về Adapter pattern trong Swift. Mình tưởng sẽ đọc được nhiều về pattern này nhưng có vẻ nó chỉ có nhiêu đó 😞</p>
+</li>
+<li>
+<p><a href="https://medium.com/ios-os-x-development/edit-breakpoints-in-xcode-a20b4e453598"target="_blank">Edit Breakpoints in Xcode</a>. Sức mạnh của công cụ debugging trong Xcode 😱 Hồi xưa cần những điều kiện như vậy để debug bên VS thì không biết cách, bây giờ bên Xcode có rồi thì lại ít khi dùng tới 😂</p>
+</li>
+<li>
+<p><a href="https://medium.com/ios-os-x-development/highlight-warnings-in-xcode-521125121a75"target="_blank">Highlight Warnings in Xcode</a>. Cách tạo ra các custom warning như TODO trong Xcode</p>
+</li>
+<li>
+<p><a href="https://martinmitrevski.com/2018/02/16/forward-pipe-operator-in-swift/"target="_blank">Forward pipe operator in Swift</a>. Nói về cách implement Forward Pipe trong Swift 😱Đây là một concept rất là hay, giúp code mình clear và clean hơn rất nhiều</p>
+</li>
+<li>
+<p><a href="https://medium.com/@smalam119/viper-design-pattern-for-ios-application-development-7a9703902af6"target="_blank">VIPER Design Pattern For iOS Application Development.</a>. Trong thời gian mình nghiên cứu và làm app theo kiến trúc VIPER thì thấy bài này. Nói chung tác giả cũng làm rõ được các module trong kiến trúc VIPER nhưng để chi tiết và đi sâu thì còn rất nhiều thứ phải nói</p>
+</li>
+<li>
+<p><a href="https://medium.com/swift-programming/using-lazy-to-delay-computation-8aa4ea236d0a"target="_blank">Using Lazy to Delay Computation</a>. Sử dụng từ khóa <code>lazy</code> để tăng performance của code 😱 Trước đây mình có tìm hiểu về thằng <code>lazy</code> này nhưng thực sự chưa nắm được bản chất của nó, chỉ biết sơ sơ vì trong quá trình code mình cũng không hay gặp.</p>
+</li>
+<li>
+<p><a href="https://blog.slashkeys.com/delegation-pattern-in-swift-50141cc689ae"target="_blank">Delegation pattern in Swift</a>. Khi gọi restful api từ server thường người ta sẽ sử dụng closure để truyền ra kết quả trả về từ server. Cách tiếp cận này đi đâu mình cũng gặp và hiện tại mình cũng vẫn đang sử dụng cách này 😄 Tuy nhiên, cách đây khá lâu mình có gặp một bạn bảo là bạn ấy không bao giờ sử dụng closure trong trường hợp này mà thay vào đó là sử dụng delegate. Mình khá là ngạc nhiên với cách tiếp cận này vì nó rất là hay (theo cá nhân mình nghĩ thế) và đảm bảo tránh được tình trạng retain cycle. Cách cài đặt cũng không có gì khó lắm, rất gần gũi với những người hay sử dụng delegate pattern 😉</p>
+</li>
+</ol>
+</article><section class="article navigation">
+	<p style="text-align:left;"><a class="link" href="/posts/reading-april-2018/"><span class="li">&larr;</span>Reading - April 2018</a><span style="float:right;">
+			<a class="link" href="/posts/my-first-open-source-project/"><span class="li">&rarr;</span>My first open source project</a class="link">
+		</span></p>
+</section></div><section id="footer" class="footer"><div class="footer-wrap">
+	<br>
+    <p class="copyright">Đinh Quang Hiếu's blog</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>
