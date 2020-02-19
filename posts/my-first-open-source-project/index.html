@@ -29,9 +29,9 @@
 </ul>
 <p>Ok, vậy mình sẽ tạo lớp <code>GradientLayer</code> kế thừa từ lớp <code>CAGradientLayer</code> để đơn giản hóa việc tạo một layer có gradient color</p>
 <div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="n">open</span> <span class="kd">class</span> <span class="nc">GradientLayer</span><span class="p">:</span> <span class="n">CAGradientLayer</span> <span class="p">{</span>
-    
+
     <span class="kd">private</span> <span class="kd">var</span> <span class="nv">direction</span><span class="p">:</span> <span class="n">GradientDirection</span> <span class="p">=</span> <span class="p">.</span><span class="n">bottomLeftToTopRight</span>
-    
+
     <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">direction</span><span class="p">:</span> <span class="n">GradientDirection</span><span class="p">,</span> <span class="n">colors</span><span class="p">:</span> <span class="p">[</span><span class="n">UIColor</span><span class="p">]</span><span class="p">,</span> <span class="n">cornerRadius</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
         <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="p">)</span>
         <span class="kc">self</span><span class="p">.</span><span class="n">direction</span> <span class="p">=</span> <span class="n">direction</span>
@@ -42,15 +42,15 @@
         <span class="kc">self</span><span class="p">.</span><span class="n">endPoint</span> <span class="p">=</span> <span class="n">endPoint</span>
         <span class="kc">self</span><span class="p">.</span><span class="n">cornerRadius</span> <span class="p">=</span> <span class="n">cornerRadius</span>
     <span class="p">}</span>
-    
+
     <span class="kd">public</span> <span class="kr">override</span> <span class="kd">init</span><span class="p">(</span><span class="n">layer</span><span class="p">:</span> <span class="nb">Any</span><span class="p">)</span> <span class="p">{</span>
         <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">layer</span><span class="p">:</span> <span class="n">layer</span><span class="p">)</span>
     <span class="p">}</span>
-    
+
     <span class="kr">required</span> <span class="kd">public</span> <span class="kd">init</span><span class="p">(</span><span class="n">coder</span> <span class="n">aDecoder</span><span class="p">:</span> <span class="n">NSCoder</span><span class="p">)</span> <span class="p">{</span>
         <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="p">)</span>
     <span class="p">}</span>
-    
+
     <span class="kd">public</span> <span class="kr">final</span> <span class="kd">func</span> <span class="nf">clone</span><span class="p">(</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">GradientLayer</span> <span class="p">{</span>
         <span class="k">if</span> <span class="kd">let</span> <span class="nv">colors</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">colors</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">GradientLayer</span><span class="p">(</span><span class="n">direction</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">direction</span><span class="p">,</span> <span class="n">colors</span><span class="p">:</span> <span class="n">colors</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">UIColor</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">cgColor</span><span class="p">:</span> <span class="nv">$0</span> <span class="k">as</span><span class="p">!</span> <span class="n">CGColor</span><span class="p">)</span> <span class="p">}</span><span class="p">,</span> <span class="n">cornerRadius</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">cornerRadius</span><span class="p">)</span>
@@ -75,7 +75,7 @@
 </code></pre></div><h1 id="gradient-image">Gradient image</h1>
 <p>Với <code>UIView</code> thì mình set được gradient color rồi, vậy với <code>UIImageView</code> thì sao? Đương nhiên mình cũng có thể lạo 1 đối tượng <code>GradientLayer</code> rồi insert vào <code>UIImageView</code> nhưng làm vậy thì&hellip; kì quá 😂 Thử thách thức bản thân thêm chút xíu coi, vậy mình có thể tạo ra gradient image không? Lại google tiếp 😂 Rất may mắn tìm được vài kết quả, mà sau một hồi thử thì cũng làm được</p>
 <div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">public</span> <span class="kd">extension</span> <span class="nc">UIImage</span> <span class="p">{</span>
-    
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromGradient</span><span class="p">(</span><span class="kc">_</span> <span class="n">gradient</span><span class="p">:</span> <span class="n">GradientLayer</span><span class="p">,</span> <span class="n">frame</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">,</span> <span class="n">cornerRadius</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UIImage</span><span class="p">?</span> <span class="p">{</span>
         <span class="n">UIGraphicsBeginImageContextWithOptions</span><span class="p">(</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="n">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">scale</span><span class="p">)</span>
         <span class="k">guard</span> <span class="kd">let</span> <span class="nv">ctx</span> <span class="p">=</span> <span class="n">UIGraphicsGetCurrentContext</span><span class="p">(</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
@@ -103,12 +103,12 @@
 <span class="p">}</span>
 </code></pre></div><p>Và đây là kết quả khi set gradient color cho text</p>
 <p align="center">
-<img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/UIGradient.png" width="300">
+<img src="/images/UIGradient.png" width="300">
 </p>
 <h1 id="gradient-library">Gradient library</h1>
 <p>Trong lúc làm project này tình cơ mình tìm được trang <a href="http://www.gradients.io/"target="_blank">http://www.gradients.io/</a>, nhìn qua phát mê mấy cái màu gradient ở trang này luôn, nên quyết định tạo ra sẵn mấy cái gradient layer dựa theo trang này để cho mọi người cùng xài. Bên cạnh đó mình cũng làm một cái example project để mọi người có thể xem qua các mẫu gradient này.</p>
 <p align="center">
-<img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/OceanBlue.png" width="150"><img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/Sanguine.png" width="150"><img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/LusciousLime.png" width="150"><img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/PurpleLake.png" width="150">
+<img src="/images/OceanBlue.png" width="150"><img src="/images/Sanguine.png" width="150"><img src="/images/LusciousLime.png" width="150"><img src="/images/PurpleLake.png" width="150">
 </p>
 <h1 id="câu-like">Câu like</h1>
 <p>Tất nhiên làm xong project mất bao nhiêu công sức mà bỏ không vậy cũng uổng nên phải đi câu like chứ 😂 Đầu tiên mình share lên fanpage <a href="https://www.facebook.com/apple.ios.developers/"target="_blank">iOS Developers</a>. Mình tiếp tục contribute vào repo <a href="https://github.com/matteocrippa/awesome-swift#colors"target="_blank">matteocrippa/awesome-swift</a>. Các bạn có thể tìm thấy project của mình dưới cùng mục <code>Colors</code> với tên <a href="https://github.com/dqhieu/UIGradient"target="_blank">UIGradient</a>. Tính đến nay nhận được số lượt star và fork nhiều hơn mình mong đợi 😍</p>
@@ -116,9 +116,9 @@
 <p>Và đây là thành quả của mình, các bạn có thể xem qua lib này ở <a href="https://github.com/dqhieu/UIGradient"target="_blank">đây</a>, tất cả đều open source</p>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <p align="center">
-        <img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/UIGradient.png" width="200" />
+        <img src="/images/UIGradient.png" width="200" />
         <br><br>
-        <img src="{{ site.baseurl }}/assets/images/2018-02-02-how-i-started-uigradient/UIGradientExample.png" width="300" />
+        <img src="/images/UIGradientExample.png" width="300" />
         <br>
         <br>
         A simple and powerful library for using gradient layer, image, color
@@ -130,7 +130,8 @@
         <a class="github-button" href="https://github.com/dqhieu/UIGradient" data-size="large" data-show-count="true">Stars</a>
         <br>
         <br>
-</p></article><section class="article navigation">
+</p>
+</article><section class="article navigation">
 	<p style="text-align:left;"><a class="link" href="/posts/reading-feb-2018/"><span class="li">&larr;</span>Reading - Feb 2018</a><span style="float:right;">
 			<a class="link" href="/posts/reading-jan-2018/"><span class="li">&rarr;</span>Reading - Jan 2018</a class="link">
 		</span></p>
