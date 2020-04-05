@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Đinh Quang Hiếu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bóc phốt Xcode - Phần 1</title>
+      <link>/posts/boc-phot-xcode-phan-1/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/boc-phot-xcode-phan-1/</guid>
+      <description>Nhân tiện ngày chủ nhật ở nhà rảnh rỗi bị lệnh cách lý, mình muốn bóc phốt cái tool mà mình dùng để kiếm tiền hằng ngày. Hôm nay mình sẽ bóc phốt vụ quản lý assets của Xcode.
+ Để bắt đầu, mình tạo 1 project mới và add 1 tấm hình vào Assets.xcassets, đặt tên nó là background.
+Bây giờ mở storyboard lên, add 1 UIImageView vào màn hình và gán cho cái hình vừa rồi.</description>
+    </item>
     
     <item>
       <title>2019 in Review</title>

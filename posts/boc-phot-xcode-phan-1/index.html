@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Bóc phốt Xcode - Phần 1&nbsp;&ndash;&nbsp;Đinh Quang Hiếu&#39;s blog</title><link rel="stylesheet" href="/css/core.min.8f859e214178536304ee5d1706deb8f51c0961249e3fa0187afe2b67637c6cfc2734041fbe4ed44f16bc948984376eb6.css" integrity="sha384-j4WeIUF4U2ME7l0XBt649RwJYSSeP6AYev4rZ2N8bPwnNAQfvk7UTxa8lImEN262"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon.ico" alt /><span class="site name">Đinh Quang Hiếu's blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="https://github.com/dqhieu"target="_blank">Github</a></nav></div></span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Bóc phốt Xcode - Phần 1</h1><p class="article date">Sunday, April 5, 2020</p></section><article class="article markdown-body"><p>Nhân tiện ngày chủ nhật ở nhà rảnh rỗi bị lệnh cách lý, mình muốn bóc phốt cái tool mà mình dùng để kiếm tiền hằng ngày. Hôm nay mình sẽ bóc phốt vụ quản lý assets của Xcode.</p>
+<hr>
+<p>Để bắt đầu, mình tạo 1 project mới và add 1 tấm hình vào <code>Assets.xcassets</code>, đặt tên nó là <code>background</code>.</p>
+<p align="center">
+<img src="/images/assets-1.png">
+</p>
+<p>Bây giờ mở storyboard lên, add 1 <code>UIImageView</code> vào màn hình và gán cho cái hình vừa rồi. Xong build project và chạy trên simulator.</p>
+<p align="center">
+<img src="/images/assets-2.png">
+</p>
+<p>Kết quả nhận được khi chạy trên simulator.</p>
+<p align="center">
+<img src="/images/assets-3.png" width="200">
+</p>
+<p>Tiếp theo, hãy add thêm 1 asset catalog mới vào project, đặt tên nó là gì cũng được. Như trong hình mình để mặc định theo Xcode suggest là <code>Media.xcassets</code>. Add 1 tấm hình khác vào catalog này và đặt tên nó cũng là <code>background</code> luôn.</p>
+<p align="center">
+<img src="/images/assets-4.png">
+</p>
+<p>Quay trở lại storyboard và bùm, magic xuất hiện. Tấm hình trên storyboard lúc này là <code>background</code> mới được thêm vào <code>Media.xcassets</code>.</p>
+<p align="center">
+<img src="/images/assets-5.png">
+</p>
+<p>Thử build project và chạy trên simulator, và kết quả là tấm hình ở trên simulator lại khác tấm hình ở storyboard 🤯</p>
+<p align="center">
+<img src="/images/assets-6.png">
+</p>
+<p>Đây là một lỗi mà theo như Apple nói là tên của các asset phải là unique trong cùng 1 target, ở đây cả 2 catalog <code>Assets.xcassets</code> và <code>Media.xcassets</code> đều có cùng 1 asset tên <code>background</code> và cùng target <code>TestAssets</code>.</p>
+<blockquote>
+<p>For any target in an Xcode project, the fully qualified name of an asset must be unique across all the asset catalogs and across all asset types. For example, it is an error to have an image set folder in one asset catalog called Llama.imageset and an image set with the same name in the same catalog or in a different catalog that is part of the same target. Similarly, it is an error to have both an image set folder called Llama.imageset and an app icon folder called Llama.appiconset in the same catalog or in a different catalog that is part of the same target.</p>
+</blockquote>
+<p>(<a href="https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/FolderStructure.html">https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/FolderStructure.html</a>)</p>
+<p>Nhưng mà tại sao khi build không báo error luôn mà chỉ báo mỗi warning 🤔? Nếu báo error luôn thì sẽ đỡ đau đầu hơn cho dev rất nhiều.</p>
+<blockquote>
+<p>⚠️ The image set name &ldquo;background&rdquo; is used by multiple image sets.</p>
+</blockquote>
+<hr>
+<p>Tiếp tục đào sâu thêm tí, mình sẽ tạo thêm 1 target khác thêm vào 1 image cùng tên xem mọi chuyện như thế nào.
+Mở project lên và tạo thêm 1 target mới, chọn Framework, nhấn Next và đặt tên là <code>Common</code>.</p>
+<p align="center">
+<img src="/images/assets-7.png">
+</p>
+<p>Sau đó, di chuyển <code>Media.xcassets</code> từ <code>TestAssets</code> vào <code>Common</code> framework.</p>
+<p align="center">
+<img src="/images/assets-8.png">
+</p>
+<p>Quay trở lại storyboard, tấm hình preview lại là <code>background</code> trong <code>Media.xcassets</code> (lúc nãy đã được move vào <code>Common</code> framework). Build project và chạy thử, trên simulator lại là tấm hình <code>background</code> của <code>Assets.xcassets</code>.</p>
+<p align="center">
+<img src="/images/assets-9.png">
+</p>
+<p>Vậy làm sao để gán tấm hình <code>background</code> trong <code>Common</code> framework cho cái <code>UIImageView</code> lúc chạy trên Simulator?</p>
+<p>Trước tiên, tạo 1 class trong <code>Common</code> framework, đặt đại cái tên là <code>DummyView</code> đi.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DummyView</span><span class="p">:</span> <span class="n">UIView</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div><p>Sau đó, tạo outlet reference giữa <code>UIImageView</code> và <code>ViewController</code>. Bây giờ, việc cần làm là lấy bundle của <code>Media.xcassets</code> và tạo 1 <code>UIImage</code> với tên là <code>background</code>. Lúc này, <code>UIImage</code> của chúng ta sẽ là tấm hình <code>background</code> trong <code>Media.xcassets</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">Common</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="n">UIViewController</span> <span class="p">{</span>
+
+  <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="n">UIImageView</span><span class="p">!</span>
+
+  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">(</span><span class="p">)</span>
+
+    <span class="kd">let</span> <span class="nv">bundle</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">DummyView</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span>
+    <span class="n">imageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&#34;</span><span class="s">background</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">in</span><span class="p">:</span> <span class="n">bundle</span><span class="p">,</span> <span class="n">compatibleWith</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div><p>Build project và chạy thử, kết quả trên simulator.</p>
+<p align="center">
+<img src="/images/assets-10.png" width="200">
+</p>
+<hr>
+<p>Qua đây, bài học rút ra là:</p>
+<ul>
+<li>Không đặt trùng tên asset.</li>
+<li>Trước khi thêm asset cần kiểm tra xem asset đó đã tồn tại trong project hay chưa.</li>
+<li>Khi tạo UIImage cần kiểm tra target của asset để tránh việc tốn thời gian để debug.</li>
+</ul>
+<p>Ngoài ra, có rất nhiều cách để quản lý tốt hơn vụ asset này cũng như có nhiều tools để search duplicated assets, unused assets trong project, ví dụ như:</p>
+<ul>
+<li><a href="https://www.avanderlee.com/optimization/unused-images-clean-up/">https://www.avanderlee.com/optimization/unused-images-clean-up/</a></li>
+<li><a href="https://stackoverflow.com/questions/6113243/how-to-find-unused-images-in-an-xcode-project">https://stackoverflow.com/questions/6113243/how-to-find-unused-images-in-an-xcode-project</a></li>
+<li><a href="https://github.com/mac-cain13/R.swift">https://github.com/mac-cain13/R.swift</a></li>
+</ul>
+<hr>
+<p>Phốt thì nhiều, riêng vụ asset này cũng còn rất nhiều topic như nên xài image png hay pdf, làm sao để optimize asset để app size nhẹ hơn, v.v&hellip; Để hôm khác rảnh rỗi ngồi bóc tiếp.</p>
+</article><section class="article navigation">
+	<p style="text-align:left;"><span style="float:right;">
+			<a class="link" href="/posts/2019-in-review/"><span class="li">&rarr;</span>2019 in Review</a class="link">
+		</span></p>
+</section></div><section id="footer" class="footer"><div class="footer-wrap">
+	<br>
+    <p class="copyright">Đinh Quang Hiếu's blog</p>
+
+    
+</div>
+</section></div>
+</body>
+
+</html>
