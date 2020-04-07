@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Đinh Quang Hiếu&#39;s blog</title>
     <link>/tags/</link>
     <description>Recent content in Tags on Đinh Quang Hiếu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ios</title>
+      <link>/tags/ios/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ios/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>xcode</title>
+      <link>/tags/xcode/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/xcode/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>grab</title>
+      <link>/tags/grab/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/grab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>open source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>

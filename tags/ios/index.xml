@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ios on Đinh Quang Hiếu&#39;s blog</title>
+    <link>/tags/ios/</link>
+    <description>Recent content in ios on Đinh Quang Hiếu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bóc phốt Xcode - Phần 1</title>
+      <link>/posts/boc-phot-xcode-phan-1/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/boc-phot-xcode-phan-1/</guid>
+      <description>Nhân tiện ngày chủ nhật ở nhà rảnh rỗi vì lệnh cách ly, mình muốn bóc phốt cái tool mà mình dùng để kiếm tiền hằng ngày. Hôm nay mình sẽ bóc phốt vụ quản lý assets của Xcode.
+ Để bắt đầu, mình tạo 1 project mới và add 1 tấm hình vào Assets.xcassets, đặt tên nó là background.
+Bây giờ mở storyboard lên, add 1 UIImageView vào màn hình và gán cho cái hình vừa rồi.</description>
+      
+    </item>
+    
+    <item>
+      <title>My first open source project</title>
+      <link>/posts/my-first-open-source-project/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/my-first-open-source-project/</guid>
+      <description>Vào một ngày đẹp trời, mình lướt Medium và thấy một cái UI concept được thiết kế rất đẹp với các màu gradient, thế là chợt nghĩ ra ý tưởng làm một cái lib để sử dụng gradient color trong iOS. Nghĩ là làm, mình search google và tìm được vài kết quả. Ngó sơ qua thấy cũng đơn giản nên bay vào làm luôn.
+GradientLayer Trong iOS, để set gradient background color cho một đối tượng UIView, mình phải tạo một đối tượng CAGradientLayer và insert nó vào cái view cần set gradient background color.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>open source on Đinh Quang Hiếu&#39;s blog</title>
+    <link>/tags/open-source/</link>
+    <description>Recent content in open source on Đinh Quang Hiếu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My first open source project</title>
+      <link>/posts/my-first-open-source-project/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/my-first-open-source-project/</guid>
+      <description>Vào một ngày đẹp trời, mình lướt Medium và thấy một cái UI concept được thiết kế rất đẹp với các màu gradient, thế là chợt nghĩ ra ý tưởng làm một cái lib để sử dụng gradient color trong iOS. Nghĩ là làm, mình search google và tìm được vài kết quả. Ngó sơ qua thấy cũng đơn giản nên bay vào làm luôn.
+GradientLayer Trong iOS, để set gradient background color cho một đối tượng UIView, mình phải tạo một đối tượng CAGradientLayer và insert nó vào cái view cần set gradient background color.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

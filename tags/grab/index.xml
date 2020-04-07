@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>grab on Đinh Quang Hiếu&#39;s blog</title>
+    <link>/tags/grab/</link>
+    <description>Recent content in grab on Đinh Quang Hiếu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/grab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thử việc tại Grab</title>
+      <link>/posts/thu-viec-tai-grab/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/thu-viec-tai-grab/</guid>
+      <description>Mình vừa kết thúc 6 tháng thử việc tại Grab Singapore (đúng rồi đấy, thử việc 6 tháng, mình không ghi nhầm đâu 😆) với vị trí Mobile Software Engineer (iOS). 6 tháng là một khoảng thời gian khá dài nhưng thực sự mình cảm thấy nó trôi qua cứ như 6 tuần hay 6 ngày vậy. Bây giờ thì mình đang ngồi rung đùi ở Sài Gòn, nhâm nhi tách cà phê và chờ kết quả.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
